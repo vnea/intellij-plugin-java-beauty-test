@@ -1,0 +1,19 @@
+<idea-plugin>
+    <id>com.vnea.intellij.plugin.java-beauty-test</id>
+    <name>Display Java test names with spaces</name>
+    <vendor url="https://github.com/vnea">vnea</vendor>
+
+    <description>This plugin allows to display Java test names with spaces as it can be hard to read long tests written in camel/snake case.</description>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+</idea-plugin>
