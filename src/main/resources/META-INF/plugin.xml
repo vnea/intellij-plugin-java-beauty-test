@@ -3,7 +3,9 @@
     <name>Display Java test names with spaces</name>
     <vendor url="https://github.com/vnea">vnea</vendor>
 
-    <description>This plugin allows to display Java test names with spaces as it can be hard to read long tests written in camel/snake case.</description>
+    <description>This plugin allows to display Java test names with spaces as it can be hard to read long tests written
+        in camel/snake case.
+    </description>
 
     <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->
@@ -11,9 +13,13 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
+        <lang.foldingBuilder language="JAVA"
+                             implementationClass="com.vnea.intellij.plugin.javabeautytest.folding.JavaTestFoldingBuilder"/>
     </extensions>
 
     <actions>
         <!-- Add your actions here -->
     </actions>
+
+    <depends>com.intellij.java</depends>
 </idea-plugin>
