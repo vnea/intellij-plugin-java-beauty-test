@@ -27,7 +27,9 @@ class JavaTestFoldingBuilder : FoldingBuilderEx() {
 
         if (psiElement is PsiMethod) {
             return toHumanReadable(psiElement.name)
-        } else if (psiElement is PsiClass) {
+        }
+
+        if (psiElement is PsiClass) {
             val name = psiElement.name
             if (name != null) {
                 return toHumanReadable(name)
@@ -80,8 +82,8 @@ class JavaTestFoldingBuilder : FoldingBuilderEx() {
         val humanReadable = StringUtils.join(
             StringUtils
                 .splitByCharacterTypeCamelCase(text)
-                .filterNot { chunkName -> chunkName.matches(Regex("_+")) }
-                .map(String::toLowerCase),
+                .filterNot { it.matches(Regex("_+")) }
+                .map(String::lowercase),
             StringUtils.SPACE
         )
 
