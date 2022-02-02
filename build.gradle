@@ -8,7 +8,7 @@ apply plugin: "kotlin"
 apply plugin: "org.jetbrains.intellij"
 
 group 'com.vnea.intellij.plugin'
-version '1.0.4'
+version '1.0.5'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
@@ -30,7 +30,7 @@ dependencies {
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-    version = '2021.2'
+    version = '2021.3'
     plugins = ['java']
 }
 
